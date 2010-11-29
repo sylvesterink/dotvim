@@ -8,3 +8,8 @@ Create symlink:
     
     (If using a .gvimrc, which isn't available yet)
     ln -s ~/.vim/gvimrc ~/.gvimrc
+
+Create directories for backup/temp files in home directory
+
+    mkdir ~/.vimbackup
+    mkdir ~/.vimtmp

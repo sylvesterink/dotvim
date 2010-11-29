@@ -108,18 +108,18 @@ if !exists(":DiffOrig")
 endif
 "END EXAMPLE VIM FILE
 
-"" ------------------------------
-"" My Settings
-"" ------------------------------
-"" for compiling
-"set makeprg=cmake
+" ------------------------------
+" My Settings
+" ------------------------------
+" for compiling
+set makeprg=cmake
 
-" Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
- 
-" Use the same symbols as TextMate for tabstops and EOLs
+" Use easy to read symbols for tabstops and EOLs
 set listchars=tab:»\ ,eol:¬
 
+" ------------------------------
+" My Functions
+" ------------------------------
 "Run said command but presereve current settings
 function! Preserve(command)
     " Preparation: save last search, and cursor position.
@@ -132,6 +132,13 @@ function! Preserve(command)
     let @/=_s
     call cursor(l, c)
 endfunction
+
+" ------------------------------
+" My Binds
+" ------------------------------
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+ 
 " Strip trailing whitespaces from file
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 
@@ -205,15 +212,14 @@ nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 "" very slow, so I disable this
 "" let Tlist_Process_File_Always = 1 " To use the :TlistShowTag and the :TlistShowPrototype commands without the taglist window and the taglist menu, you should set this variable to 1.
 "":TlistShowPrototype [filename] [linenumber]
-"
-"" --------------------
-"" NERDTree
-"" --------------------
-"" F2 : Switch on/off NERDTree
-"nnoremap <silent> <F2> :NERDTreeToggle<CR>
-"let NERDTreeAutoCenter = 1
-"
-"
+
+" --------------------
+" NERDTree
+" --------------------
+" F2 : Switch on/off NERDTree
+nnoremap <silent> <F2> :NERDTreeToggle<CR>
+let NERDTreeAutoCenter = 1
+
 "" --------------------
 "" OmniCPPComplete
 "" --------------------
