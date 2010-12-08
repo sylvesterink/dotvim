@@ -35,8 +35,8 @@ set sw=4 sts=4 ts=4 et  " use spaces instead of tabs
 " hide toolbar
 set guioptions-=T
 
-" hide menu (unnecessary atm)
-" set guioptions-=m
+" hide menu
+set guioptions-=m
 
 " Set custom color
 if has("gui_running")
