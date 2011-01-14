@@ -4,6 +4,3 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = https://github.com/vim-scripts/minibufexpl.vim.git
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = http://github.com/vim-scripts/taglist.vim.git
