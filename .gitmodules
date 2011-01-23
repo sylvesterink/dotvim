@@ -14,7 +14,3 @@
 	path = bundle/OmniCppComplete
 	url = https://github.com/vim-scripts/OmniCppComplete.git
     ignore = untracked
-[submodule "bundle/tvo"]
-	path = bundle/tvo
-	url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
-    ignore = untracked
