@@ -22,3 +22,7 @@
 	path = bundle/snipMate
 	url = https://github.com/vim-scripts/snipMate.git
     ignore = untracked
+[submodule "bundle/doxygentoolkit"]
+	path = bundle/doxygentoolkit
+	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
+    ignore = untracked
