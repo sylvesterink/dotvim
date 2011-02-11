@@ -1,6 +1,9 @@
 Installation:
 
     git clone http://github.com/sylvesterink/dotvim.git ~/.vim
+    cd ~/.vim
+    git submodule init
+    git submodule update
 
 Create symlink:
 
@@ -13,3 +16,17 @@ Create directories for backup/temp files in home directory
 
     mkdir ~/.vimbackup
     mkdir ~/.vimtmp
+
+To Get Updates
+    git pull
+
+To Get Submodule Updates (may be incorrect, check git submodule pull)
+    cd ~/.vim/bundle/[SUBMODULE]
+    git pull
+
+ON WINDOWS
+    Install it to the home directory, which can be found via the command
+    :echo $HOME
+
+    copy the vimrc to home as _vimrc
+    make directories vimbackup and vimtmp in home

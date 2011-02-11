@@ -18,8 +18,13 @@ if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file
-  set backupdir=~/.vimbackup
-  set directory=~/.vimtmp
+  if has("win32") || has("win64")
+      set backupdir=~/vimbackup
+      set directory=~/vimtmp
+  else
+      set backupdir=~/.vimbackup
+      set directory=~/.vimtmp
+  endif
   "set backupdir=$VIM/vimfiles/backup "for windows
   "set directory=$VIM/vimfiles/tmp "for windows
 endif
