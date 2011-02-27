@@ -124,7 +124,9 @@ endif
 " My Settings
 " ------------------------------
 " for compiling
-set makeprg=cmake
+" Use make as default for now.  Cmake can be activated
+" via cppide script.
+" set makeprg=cmake
 
 " Use easy to read symbols for tabstops and EOLs
 set listchars=tab:»\ ,eol:¬
