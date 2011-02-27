@@ -26,3 +26,7 @@
 	path = bundle/doxygentoolkit
 	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
     ignore = untracked
+[submodule "bundle/NERDCommenter"]
+	path = bundle/NERDCommenter
+	url = https://github.com/vim-scripts/The-NERD-Commenter.git
+    ignore = untracked
