@@ -56,7 +56,9 @@ if has("gui_running")
 endif
 
 " Set custom font for windows only
-"set guifont=ProggyCleanTTSZ:h12
+if has("win32") || has("win64")
+    set guifont=ProggyCleanTTSZ:h12
+endif
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
