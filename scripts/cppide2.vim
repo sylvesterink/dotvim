@@ -1,4 +1,4 @@
-echo "CPPIDE2 Scripts Loaded"
+set makeprg=make
 
 map <F5> : call CompileGcc()<CR>
 func! CompileGcc()
@@ -14,3 +14,4 @@ func! CompileRunGcc()
   "exec \"! ./%<\"  for linux (remove forward slashes)
 endfunc
 
+echo "CPPIDE2 Scripts Loaded"

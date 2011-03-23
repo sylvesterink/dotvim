@@ -155,6 +155,9 @@ endfunction
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
  
+" Shortcut to enable the cmake compilation commands
+nmap <leader>i :ru scripts/cppide.vim<CR>
+
 " Strip trailing whitespaces from file
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 

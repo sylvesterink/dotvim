@@ -1,10 +1,18 @@
 set makeprg=cmake
 
+if has("win32") || has("win64")
+    let s:dbuildcommand = "make -DCMAKE_BUILD_TYPE=Debug -G \"MinGW Makefiles\" ../../"
+    let s:buildcommand = "make -DCMAKE_BUILD_TYPE=Release -G \"MinGW Makefiles\" ../../"
+else
+    let s:dbuildcommand = "make -DCMAKE_BUILD_TYPE=Debug -G \"Unix Makefiles\" ../../"
+    let s:buildcommand = "make -DCMAKE_BUILD_TYPE=Release -G \"Unix Makefiles\" ../../"
+endif
+
 map <F5> : call BuildDebugCmake()<CR>
 func! BuildDebugCmake()
   exec "wa"
   exec "cd bin/debug/"
-  exec "make -DCMAKE_BUILD_TYPE=Debug -G \"MinGW Makefiles\" ../../"
+  exec s:dbuildcommand 
   exec "cd ../../"
 endfunc
 
@@ -12,7 +20,7 @@ map <C-F5> : call BuildCmake()<CR>
 func! BuildCmake()
   exec "wa"
   exec "cd bin/release/"
-  exec "make -DCMAKE_BUILD_TYPE=Release -G \"MinGW Makefiles\" ../../"
+  exec s:buildcommand 
   exec "cd ../../"
 endfunc
 
