@@ -25,10 +25,8 @@ else
       set backupdir=~/.vimbackup
       set directory=~/.vimtmp
   endif
-  "set backupdir=$VIM/vimfiles/backup "for windows
-  "set directory=$VIM/vimfiles/tmp "for windows
 endif
-set history=50		" keep 50 lines of command line history
+set history=500		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 set showmode 		" show when in insert mode
@@ -59,6 +57,12 @@ endif
 if has("win32") || has("win64")
     set guifont=ProggyCleanTTSZ:h12
 endif
+
+set encoding=utf8
+try
+    lang en_US
+catch
+endtry
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -160,6 +164,13 @@ nmap <leader>i :ru scripts/cppide.vim<CR>
 
 " Strip trailing whitespaces from file
 nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+
+" Switch to the directory of the open buffer
+nmap <leader>cd :cd %:p:h<CR>
+
+" Open a buffer for scribble
+map <leader>q :e ~/buffer<CR>
+au BufRead,BufNewFile ~/buffer iab <buffer> xh1 ===================================================
 
 "---------------------------------------------------
 " PLUGINS
