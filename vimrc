@@ -50,7 +50,7 @@ set guioptions-=m
 
 " Set custom color
 if has("gui_running")
-  colorscheme wombat "Ink
+  colorscheme ink "Ink
 endif
 
 " Set custom font for windows only
@@ -136,6 +136,12 @@ endif
 
 " Use easy to read symbols for tabstops and EOLs
 set listchars=tab:»\ ,eol:¬
+
+" Load doxygen automatically for c,cpp,idl files
+let g:load_doxygen_syntax=1
+
+" Make doxygen comments easier to read
+"let g:doxygen_enhanced_color=1
 
 " ------------------------------
 " My Functions
