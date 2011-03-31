@@ -172,6 +172,9 @@ nmap <leader>cd :cd %:p:h<CR>
 map <leader>q :e ~/buffer<CR>
 au BufRead,BufNewFile ~/buffer iab <buffer> xh1 ===================================================
 
+" Insert doxygen comment for functions, classes etc
+nmap <leader>d :Dox<CR>
+
 "---------------------------------------------------
 " PLUGINS
 "---------------------------------------------------
@@ -296,27 +299,3 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 "inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 "highlight Pmenu guibg=brown gui=bold
-
-"" --------------------
-"" Project
-"" --------------------
-"map <A-S-p> :Project 
-""map <A-S-o> :Project<CR>:redraw<CR>/
-"nmap <silent> <F3> <Plug>ToggleProject
-"let g:proj_window_width = 30
-"let g:proj_window_increment = 50
-"let g:proj_run1='ru scripts/cppide.vim'
-"
-"
-"" test
-"
-"" Open and close the taglist.vim separately
-""nmap <F10>  :TrinityToggleTagList<CR>
-"
-"" Open and close the NERD_tree.vim separately
-""nmap <F11>  :TrinityToggleNERDTree<CR>
-"
-""_______________________________
-"
-""__________SCRIPTS______________
-"
