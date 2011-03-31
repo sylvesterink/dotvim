@@ -10,7 +10,7 @@ if exists("syntax on")
 endif
 
 if has('eval')
-  let g:colors_name="rastafari"
+  let g:colors_name="ink"
 endif
 " General colors {{{1
 hi Normal 		guifg=#f6f3e8 guibg=#202020 gui=none
