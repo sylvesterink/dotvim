@@ -181,6 +181,12 @@ au BufRead,BufNewFile ~/buffer iab <buffer> xh1 ================================
 " Insert doxygen comment for functions, classes etc
 nmap <leader>d :Dox<CR>
 
+" Insert quick doxygen comment for function definitions
+map <leader>F O//! 
+
+" Insert quick doxygen comment for function definitions (end of line)
+map <leader>f A<tab>//!< 
+
 "---------------------------------------------------
 " PLUGINS
 "---------------------------------------------------
