@@ -305,3 +305,23 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "inoremap <expr> <C-n> pumvisible() ? '<C-n>' : '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 "inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 "highlight Pmenu guibg=brown gui=bold
+
+" --------------------
+" Doxygen Toolkit
+" --------------------
+let g:DoxygenToolkit_blockHeader="******************************"
+let g:DoxygenToolkit_blockFooter="******************************"
+
+let g:DoxygenToolkit_briefTag_pre = "\\brief "
+let g:DoxygenToolkit_templateParamTag_pre = "\\tparam "
+let g:DoxygenToolkit_paramTag_pre = "\\param "
+let g:DoxygenToolkit_returnTag = "\\return "
+let g:DoxygenToolkit_throwTag_pre = "\\throw " " \\exception is also valid
+let g:DoxygenToolkit_fileTag = "\\file "
+let g:DoxygenToolkit_authorTag = "\\author "
+let g:DoxygenToolkit_dateTag = "\\date "
+let g:DoxygenToolkit_versionTag = "\\version "
+let g:DoxygenToolkit_blockTag = "\\name "
+let g:DoxygenToolkit_classTag = "\\class "
+
+let g:DoxygenToolkit_compactDoc = "yes"

@@ -18,7 +18,7 @@ hi Title		guifg=#f6f3e8 guibg=NONE	gui=bold
 hi LineNr 		guifg=#857b6f guibg=#000000 gui=none
 hi NonText 		guifg=#808080 guibg=#303030 gui=none
 hi SpecialKey	guifg=#808080 guibg=#343434 gui=none
-hi MatchParen   guifg=#dddddd guibg=#221f85 gui=bold
+hi MatchParen   guifg=#dddddd guibg=#32298f gui=bold
 hi Folded 		guibg=#384048 guifg=#a0a8b0 gui=none
 hi Pmenu 		guifg=#f6f3e8 guibg=#444444 gui=none
 hi PmenuSel 	guifg=#000000 guibg=#cae682 gui=none
@@ -49,7 +49,7 @@ hi CursorLine   guifg=fg      guibg=#2d2d2d gui=none
 "hi TabLine      guifg=#66ff66 guibg=#008800 gui=bold
 " Syntax Highlighting {{{1
 hi Comment 		guifg=#99968b guibg=bg      gui=italic
-hi Todo 		guifg=#8f8f8f guibg=bg      gui=italic
+hi Todo 		guifg=#333333 guibg=#ff9900 gui=italic
 hi Constant 	guifg=#e5786d guibg=bg      gui=none
 hi String 		guifg=#95e454 guibg=bg      gui=italic
 hi Identifier 	guifg=#cae682 guibg=bg      gui=none
