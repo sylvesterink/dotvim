@@ -181,6 +181,9 @@ au BufRead,BufNewFile ~/buffer iab <buffer> xh1 ================================
 " Insert doxygen comment for functions, classes etc
 nmap <leader>d :Dox<CR>
 
+" Clean and compress doxygen comment and header WIP
+"map <leader>D :%s/\/\n\/\*\*\{,1}$/\/\*\*/gc<CR>
+
 " Insert quick doxygen comment for function definitions
 map <leader>F O//! 
 
