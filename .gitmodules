@@ -30,3 +30,6 @@
 	path = bundle/NERDCommenter
 	url = https://github.com/vim-scripts/The-NERD-Commenter.git
     ignore = untracked
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
