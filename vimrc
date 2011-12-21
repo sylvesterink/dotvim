@@ -124,6 +124,9 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+" display line numbers
+set number
 "END EXAMPLE VIM FILE
 
 " ------------------------------
@@ -169,7 +172,7 @@ nmap <leader>l :set list!<CR>
 nmap <leader>i :ru scripts/cppide.vim<CR>
 
 " Strip trailing whitespaces from file
-nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
 
 " Switch to the directory of the open buffer
 nmap <leader>cd :cd %:p:h<CR>
@@ -178,17 +181,25 @@ nmap <leader>cd :cd %:p:h<CR>
 map <leader>q :e ~/buffer<CR>
 au BufRead,BufNewFile ~/buffer iab <buffer> xh1 ===================================================
 
-" Insert doxygen comment for functions, classes etc
+" **** Plugin Binds ****
+" Doxygentoolkit - Insert doxygen comment for functions, classes etc
 nmap <leader>d :Dox<CR>
 
-" Clean and compress doxygen comment and header WIP
+" Doxygentoolkit - Clean and compress doxygen comment and header WIP
 "map <leader>D :%s/\/\n\/\*\*\{,1}$/\/\*\*/gc<CR>
 
-" Insert quick doxygen comment for function definitions
+" Doxygentoolkit - Insert quick doxygen comment for function definitions
 map <leader>F O//! 
 
-" Insert quick doxygen comment for function definitions (end of line)
+" Doxygentoolkit - Insert quick doxygen comment for function definitions (end of line)
 map <leader>f A<tab>//!< 
+
+" Syntastic - run manual syntax check
+map <leader>f :SyntasticCheck<CR>
+
+" Omnicppcomplete (not part of, but used by) - build tags of project
+"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <leader>t :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "---------------------------------------------------
 " PLUGINS
@@ -289,9 +300,6 @@ set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/gl
 set tags+=~/.vim/tags/sdl
 set tags+=~/.vim/tags/qt4
-" build tags of your own project with CTRL+F12
-"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-map <leader>t :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
@@ -334,3 +342,16 @@ let g:DoxygenToolkit_blockTag = "\\name "
 let g:DoxygenToolkit_classTag = "\\class "
 
 let g:DoxygenToolkit_compactDoc = "yes"
+
+" --------------------
+" Syntastic
+"   Checks for syntax errors dynamically
+"   :SyntasticToggleMode toggles active and passive checking
+"   :SyntasticCheck manually checks (for passive mode)
+" --------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_enable_signs=1
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
