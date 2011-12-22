@@ -215,6 +215,7 @@ let g:miniBufExplMaxSize = 2 " <max lines: defualt 0> setting this to 0 will mea
 "let g:miniBufExplorerMoreThanOne = 1 " Setting this to 0 will cause the MBE window to be loaded even
 let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplMapWindowNavArrows = 1
+
 ""OLD COLORS
 ""for buffers that have NOT CHANGED and are NOT VISIBLE.
 "highlight MBENormal guibg=#b5b39a guifg=gray40
@@ -224,15 +225,16 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 "highlight MBEVisibleNormal term=bold cterm=bold gui=bold guibg=#c2bfa5 guifg=gray20
 "" buffers that have CHANGED and are VISIBLE
 "highlight MBEVisibleChanged term=bold cterm=bold gui=bold guibg=#c2bfa5 guifg=IndianRed4
-"NEW COLORS
-"for buffers that have NOT CHANGED and are NOT VISIBLE.
-highlight link MBENormal NonText
-" for buffers that HAVE CHANGED and are NOT VISIBLE
-highlight link MBEChanged Folded
-" buffers that have NOT CHANGED and are VISIBLE
-highlight link MBEVisibleNormal StatusLine
-" buffers that have CHANGED and are VISIBLE
-highlight link MBEVisibleChanged PmenuSel
+
+""NEW COLORS
+""for buffers that have NOT CHANGED and are NOT VISIBLE.
+"highlight link MBENormal NonText
+"" for buffers that HAVE CHANGED and are NOT VISIBLE
+"highlight link MBEChanged Folded
+"" buffers that have NOT CHANGED and are VISIBLE
+"highlight link MBEVisibleNormal StatusLine
+"" buffers that have CHANGED and are VISIBLE
+"highlight link MBEVisibleChanged PmenuSel
 
 "" -------------------
 "" ShowMarks
@@ -349,9 +351,9 @@ let g:DoxygenToolkit_compactDoc = "yes"
 "   :SyntasticToggleMode toggles active and passive checking
 "   :SyntasticCheck manually checks (for passive mode)
 " --------------------
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_enable_signs=1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
