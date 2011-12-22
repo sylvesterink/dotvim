@@ -344,3 +344,11 @@ let g:syntastic_mode_map = { 'mode': 'active',
 "   Allows a view of the undo tree
 " --------------------
 " nothing here yet
+
+
+" --------------------
+" Statline
+"   Customizes status bar info
+" --------------------
+"  enable fugitive support
+let g:statline_fugitive = 1
