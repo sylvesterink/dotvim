@@ -22,13 +22,12 @@
 	path = bundle/doxygentoolkit
 	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
     ignore = untracked
-[submodule "bundle/NERDCommenter"]
-	path = bundle/NERDCommenter
-	url = https://github.com/vim-scripts/The-NERD-Commenter.git
-    ignore = untracked
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
