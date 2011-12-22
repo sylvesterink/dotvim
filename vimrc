@@ -254,35 +254,10 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 "highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
 
 " --------------------
-" TagList
+" Tagbar
 " --------------------
-" F4 : Switch on/off TagList
-nnoremap <silent> <F4> :TlistToggle<CR>
-" COLORING REMOVED FOR NOW BECAUSE I PREFER DEFAULT
-" TagListTagName - Used for tag names
-"highlight MyTagListTagName gui=bold guifg=Black guibg=Orange
-" TagListTagScope - Used for tag scope
-"highlight MyTagListTagScope gui=NONE guifg=Blue
-" TagListTitle - Used for tag titles
-"highlight MyTagListTitle gui=bold guifg=DarkRed guibg=LightGray
-" TagListComment - Used for comments
-"highlight MyTagListComment guifg=DarkGreen
-" TagListFileName - Used for filenames
-"highlight MyTagListFileName gui=bold guifg=Black guibg=LightBlue
-"line below not needed because ctags is in path
-"let Tlist_Ctags_Cmd = $VIM.'/vimfiles/ctags.exe' " location of ctags tool
-"let Tlist_Show_One_File = 1 " Displaying tags for only one file~
-let Tlist_Exit_OnlyWindow = 1 " if you are the last, kill yourself
-let Tlist_Use_Right_Window = 1 " split to the right side of the screen
-let Tlist_Sort_Type = "order" " sort by order or name
-let Tlist_Display_Prototype = 0 " do not show prototypes and not tags in the taglist window.
-let Tlist_Compact_Format = 0 " Remove extra information and blank lines from the taglist window.
-let Tlist_GainFocus_On_ToggleOpen = 1 " Jump to taglist window on open.
-let Tlist_Display_Tag_Scope = 1 " Show tag scope next to the tag name.
-let Tlist_Close_On_Select = 0 " Close the taglist window when a file or tag is selected.
-let Tlist_Enable_Fold_Column = 0 " Don't Show the fold indicator column in the taglist window.
-let Tlist_WinWidth = 40
-let TList_Auto_Update = 1 " When editing a file, typing :TlistUpdate will update list
+nnoremap <silent> <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
 " let Tlist_Ctags_Cmd = 'ctags --c++-kinds=+p --fields=+iaS --extra=+q --languages=c++'
 " very slow, so I disable this
 " let Tlist_Process_File_Always = 1 " To use the :TlistShowTag and the :TlistShowPrototype commands without the taglist window and the taglist menu, you should set this variable to 1.
@@ -360,7 +335,7 @@ let g:DoxygenToolkit_compactDoc = "yes"
 
 let g:syntastic_enable_signs=1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_mode_map = { 'mode': 'passive',
+let g:syntastic_mode_map = { 'mode': 'active',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': [] }
 
