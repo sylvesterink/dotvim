@@ -24,8 +24,8 @@ hi Pmenu 		guifg=#f6f3e8 guibg=#444444 gui=none
 hi PmenuSel 	guifg=#000000 guibg=#cae682 gui=none
 hi Visual		guifg=#f6f3e8 guibg=#444444 gui=none
 hi VertSplit 	guifg=#444444 guibg=#444444 gui=none
-hi StatusLine 	guifg=#f6f3e8 guibg=#444444 gui=italic
-hi StatusLineNC guifg=#857b6f guibg=#444444 gui=none
+hi StatusLine 	guifg=#f6f3e8 guibg=#444444 gui=none ctermfg=Black ctermBG=Grey
+hi StatusLineNC guifg=#857b6f guibg=#444444 gui=none ctermfg=Black ctermBG=Grey
 hi CursorColumn guifg=fg      guibg=#2d2d2d gui=none
 hi CursorLine   guifg=fg      guibg=#2d2d2d gui=none
 "hi Ignore       guifg=#888888 guibg=bg      gui=bold
