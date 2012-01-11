@@ -1,9 +1,9 @@
 @echo off
 echo Setting up directories
-if not exist bin\ (
-mkdir bin\debug
-mkdir bin\release
+if not exist build\ (
+mkdir build\debug
+mkdir build\release
 ) else (
-if not exist bin\debug\ mkdir bin\debug
-if not exist bin\release\ mkdir bin\release
+if not exist build\debug\ mkdir build\debug
+if not exist build\release\ mkdir build\release
 )
