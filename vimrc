@@ -346,6 +346,11 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 " --------------------
 " nothing here yet
 
+" --------------------
+" Vim-Snipmate
+"   Allows the insertion of snippets
+" --------------------
+" nothing here yet, may change to custom directory
 
 " --------------------
 " Statline
