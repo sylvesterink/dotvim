@@ -194,8 +194,8 @@ map <leader>F O//!
 " Doxygentoolkit - Insert quick doxygen comment for function definitions (end of line)
 map <leader>f A<tab>//!<
 
-" Syntastic - run manual syntax check
-map <leader>f :SyntasticCheck<CR>
+"" Syntastic - run manual syntax check REMOVED as syntastic isn't used
+"map <leader>s :SyntasticCheck<CR>
 
 " Omnicppcomplete (not part of, but used by) - build tags of project
 "map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
