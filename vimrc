@@ -165,6 +165,9 @@ endfunction
 " ------------------------------
 " My Binds
 " ------------------------------
+" Center screen on cursor
+nmap <space> zz
+
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
