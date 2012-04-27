@@ -167,6 +167,7 @@ endfunction
 " ------------------------------
 " Center screen on cursor
 nmap <space> zz
+nmap <s-space> zt
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -295,8 +296,8 @@ let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 "omni completion simplification
-set completeopt=menuone,menu,longest,preview
-"set completeopt=longest,menuone
+set completeopt=menuone,menu,longest
+"set completeopt=longest,menuone,preview
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "The following is to use tabs and stuff to select, Codeblocks style
@@ -337,11 +338,11 @@ let g:DoxygenToolkit_compactDoc = "yes"
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 
-let g:syntastic_enable_signs=1
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_mode_map = { 'mode': 'passive',
-            \ 'active_filetypes': [],
-            \ 'passive_filetypes': [] }
+"let g:syntastic_enable_signs=1
+"let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+"let g:syntastic_mode_map = { 'mode': 'passive',
+            "\ 'active_filetypes': [],
+            "\ 'passive_filetypes': [] }
 
 " --------------------
 " Gundo
