@@ -185,6 +185,9 @@ nmap <leader>cd :cd %:p:h<CR>
 map <leader>q :e ~/buffer<CR>
 au BufRead,BufNewFile ~/buffer iab <buffer> xh1 ===================================================
 
+" Open buffer list and prepare to select a buffer
+nnoremap <leader>b :ls<CR>:b<space>
+
 " **** Plugin Binds ****
 " Doxygentoolkit - Insert doxygen comment for functions, classes etc
 nmap <leader>d :Dox<CR>
