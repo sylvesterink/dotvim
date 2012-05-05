@@ -146,6 +146,9 @@ let g:load_doxygen_syntax=1
 " Make doxygen comments easier to read
 "let g:doxygen_enhanced_color=1
 
+" Allow unwritten buffers to be hidden while switching
+set hidden
+
 " ------------------------------
 " My Functions
 " ------------------------------
