@@ -149,6 +149,16 @@ let g:load_doxygen_syntax=1
 " Allow unwritten buffers to be hidden while switching
 set hidden
 
+" Don't let middle mouse paste, to avoid errors
+"map <MiddleMouse> <Nop>
+"imap <MiddleMouse> <Nop>
+"map <2-MiddleMouse> <Nop>
+"imap <2-MiddleMouse> <Nop>
+"map <3-MiddleMouse> <Nop>
+"imap <3-MiddleMouse> <Nop>
+"map <4-MiddleMouse> <Nop>
+"imap <4-MiddleMouse> <Nop>
+
 " ------------------------------
 " My Functions
 " ------------------------------
@@ -189,7 +199,7 @@ map <leader>q :e ~/buffer<CR>
 au BufRead,BufNewFile ~/buffer iab <buffer> xh1 ===================================================
 
 " Open buffer list and prepare to select a buffer
-nnoremap <leader>b :ls<CR>:b<space>
+nnoremap <leader>B :ls<CR>:b<space>
 
 " **** Plugin Binds ****
 " Doxygentoolkit - Insert doxygen comment for functions, classes etc
@@ -199,10 +209,12 @@ nmap <leader>d :Dox<CR>
 "map <leader>D :%s/\/\n\/\*\*\{,1}$/\/\*\*/gc<CR>
 
 " Doxygentoolkit - Insert quick doxygen comment for function definitions
-map <leader>F O//!
+"map <leader>F O//!
+"don't really use it
 
 " Doxygentoolkit - Insert quick doxygen comment for function definitions (end of line)
-map <leader>f A<tab>//!<
+"map <leader>f A<tab>//!<
+"don't really use it
 
 "" Syntastic - run manual syntax check REMOVED as syntastic isn't used
 "map <leader>s :SyntasticCheck<CR>
@@ -214,19 +226,34 @@ map <leader>t :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 " Gundo - view undo tree
 nnoremap <leader>u :GundoToggle<CR>
 
+" LustyExplorer - Open filesystem explorer
+nmap <leader>f :LustyFilesystemExplorer<CR>
+
+" LustyExplorer - Open filesystem explorer in dir of current file
+nmap <leader>r :LustyFilesystemExplorerFromHere<CR>
+
+" LustyExplorer - Open buffer explorer
+nmap <leader>b :LustyBufferExplorer<CR>
+
+" LustyExplorer - Open buffer grep
+nmap <leader>g :LustyBufferGrep<CR>
+
+" LustyJuggler - Open buffer juggler
+nmap <leader>j :LustyJuggler<CR>
+
 "---------------------------------------------------
 " PLUGINS
 "---------------------------------------------------
 " --------------------
-" MiniBufExpl
+" MiniBufExpl [REMOVE,UNUSED]
 " --------------------
-let g:miniBufExplTabWrap = 1 " make tabs show complete (no broken on two lines)
-let g:miniBufExplModSelTarget = 1 " If you use other explorers like TagList you can (As of 6.2.8) set it at 1:
-let g:miniBufExplUseSingleClick = 1 " If you would like to single click on tabs rather than double clicking on them to goto the selected buffer.
-let g:miniBufExplMaxSize = 2 " <max lines: defualt 0> setting this to 0 will mean the window gets as big as needed to fit all your buffers.
+"let g:miniBufExplTabWrap = 1 " make tabs show complete (no broken on two lines)
+"let g:miniBufExplModSelTarget = 1 " If you use other explorers like TagList you can (As of 6.2.8) set it at 1:
+"let g:miniBufExplUseSingleClick = 1 " If you would like to single click on tabs rather than double clicking on them to goto the selected buffer.
+"let g:miniBufExplMaxSize = 2 " <max lines: defualt 0> setting this to 0 will mean the window gets as big as needed to fit all your buffers.
 "let g:miniBufExplForceSyntaxEnable = 1 " There is a Vim bug that can cause buffers to show up without their highlighting. The following setting will cause MBE to
 "let g:miniBufExplorerMoreThanOne = 1 " Setting this to 0 will cause the MBE window to be loaded even
-let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
 "let g:miniBufExplMapWindowNavArrows = 1
 
 ""OLD COLORS
@@ -368,3 +395,11 @@ let g:DoxygenToolkit_compactDoc = "yes"
 " --------------------
 "  enable fugitive support
 let g:statline_fugitive = 1
+
+" --------------------
+" LustyJuggler and LustyExplorer
+"   Quick buffer navigation
+" --------------------
+"  Suppress default mappings
+let g:LustyExplorerDefaultMappings = 0
+let g:LustyJugglerDefaultMappings = 0
