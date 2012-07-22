@@ -403,3 +403,6 @@ let g:statline_fugitive = 1
 "  Suppress default mappings
 let g:LustyExplorerDefaultMappings = 0
 let g:LustyJugglerDefaultMappings = 0
+
+"  Fix potential issue with entering replace mode while in lustyjuggler
+map R <nop>
